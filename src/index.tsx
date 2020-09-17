@@ -1,21 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { CssBaseline, responsiveFontSizes } from '@material-ui/core';
+import { MuiThemeProvider as Theme } from '@material-ui/core/styles';
+import { theme } from './helpers/theme';
 import App from './App';
-import { store } from './app/store';
-import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <CssBaseline />
+    <Theme theme={responsiveFontSizes(theme)}>
       <App />
-    </Provider>
+    </Theme>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
