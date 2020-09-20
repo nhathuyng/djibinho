@@ -8,6 +8,6 @@ export default makeStyles({
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
-    height: '100vh',
+    minHeight: '100vh',
   },
 });

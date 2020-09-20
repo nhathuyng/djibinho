@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import NavBar from '../../organisms/Navbar/Navbar';
 import useStyles from './styles';
+import HeroContent from '../../molecules/HeroContent/HeroContent';
+import DownIndicator from '../../atoms/DownIndicator/DownIndicator';
 
 interface HeroProps {}
 
@@ -12,10 +14,10 @@ const Hero: React.FC<HeroProps> = ({}): JSX.Element => {
       <Container maxWidth='lg'>
         <NavBar />
         <Grid container spacing={0}>
-          <Grid item xs={3} xl={4}></Grid>
-          <Grid item xs={9} xl={8}></Grid>
+          <HeroContent />
         </Grid>
       </Container>
+      <DownIndicator />
     </div>
   );
 };
