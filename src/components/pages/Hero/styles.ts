@@ -5,7 +5,7 @@ export default makeStyles({
   root: {
     backgroundImage: `url(${hero})`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center center',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     height: '100vh',
