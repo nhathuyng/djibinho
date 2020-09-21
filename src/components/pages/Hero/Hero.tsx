@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({}): JSX.Element => {
     <div className={classes.root}>
       <Container maxWidth='lg'>
         <NavBar />
-        <Grid container spacing={0}>
+        <Grid className={classes.container}  container spacing={0}>
           <HeroContent />
         </Grid>
       </Container>

@@ -37,7 +37,7 @@ const HeroContent: React.FC<HeroContentProps> = ({}) => {
           color='primary'>
           Focusing especially on footwork and right coordination.
         </Typography>
-        <motion.div variants={variantChildren}>
+        <motion.div className={classes.btnDiv} variants={variantChildren}>
           <Btn onClick={() => console.log('1')}>learn more</Btn>
         </motion.div>
       </motion.div>
