@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography } from '@material-ui/core';
 import useStyles from './styles';
 import Btn from '../../atoms/Btn/Btn';
 import { motion } from 'framer-motion';
 import { variantContainer, variantChildren } from './variants';
+import VideoModal from '../VideoModal/VideoModal';
 
 interface HeroContentProps {}
 
 const HeroContent: React.FC<HeroContentProps> = ({}) => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Box className={classes.root}>
       <motion.div
@@ -38,9 +49,10 @@ const HeroContent: React.FC<HeroContentProps> = ({}) => {
           Focusing especially on footwork and right coordination.
         </Typography>
         <motion.div className={classes.btnDiv} variants={variantChildren}>
-          <Btn onClick={() => console.log('1')}>learn more</Btn>
+          <Btn onClick={handleOpen}>learn more</Btn>
         </motion.div>
       </motion.div>
+      <VideoModal open={open} handleClose={handleClose} />
     </Box>
   );
 };

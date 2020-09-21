@@ -7,7 +7,7 @@ interface ValuesProps {}
 
 const Values: React.FC<ValuesProps> = ({}) => {
   const classes = useStyles();
-  return <Element name='values'>Values</Element>;
+  return <Element name='values'></Element>;
 };
 
 export default Values;
