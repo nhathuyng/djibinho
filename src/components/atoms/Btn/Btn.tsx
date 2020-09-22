@@ -3,7 +3,7 @@ import { Button } from '@material-ui/core';
 import useStyles from './styles';
 
 interface BtnProps {
-  onClick: () => void;
+  onClick?: () => void;
   children: string;
 }
 

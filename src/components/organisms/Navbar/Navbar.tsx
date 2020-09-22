@@ -20,7 +20,6 @@ const Navbar: React.FC<NavbarProps> = ({}): JSX.Element => {
     <AppBar position='static' color='transparent' elevation={0}>
       <Toolbar disableGutters className={classes.toolbar}>
         <Box display='flex' alignItems='center'>
-          <Logo />
           <Title />
         </Box>
         <Box display='flex'>{matchesLG ? <NavLinks /> : <Burger />}</Box>

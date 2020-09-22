@@ -5,6 +5,6 @@ export default makeStyles((theme) => ({
   toolbar: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingRight: '5vw',
+    marginTop: '1.5rem',
   },
 }));

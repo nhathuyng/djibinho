@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 
 export default makeStyles((theme) => ({
   link: {
-    margin: '0 2rem',
+    marginLeft: '4rem',
     cursor: 'pointer',
   },
   underline: {

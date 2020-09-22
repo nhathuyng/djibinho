@@ -1,4 +1,4 @@
-export const variant = {
+export const variantLogo = {
   hidden: {
     opacity: 0,
     y: -200,
@@ -12,3 +12,18 @@ export const variant = {
     },
   },
 };
+
+// export const variantPath = {
+//   hidden: {
+//     opacity: 0,
+//     pathLength: 0,
+//   },
+//   visible: {
+//     opacity: 1,
+//     pathLength: 1,
+//     transition: {
+//       duration: 2,
+//       ease: 'easeInOut',
+//     },
+//   },
+// };
