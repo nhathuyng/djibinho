@@ -37,32 +37,34 @@ const values = [
 const ValuesContent: React.FC<ValuesContentProps> = ({}) => {
   const classes = useStyles();
   return (
-    <Grid container item>
-      <motion.div variants={variantValues} initial='hidden' animate='visible'>
-        {values.map(({ heading, content }) => {
-          return (
-            <motion.div variants={variantContainer} className={classes.motion}>
-              <Typography
-                component={motion.div}
-                variants={variantHeading}
-                className={classes.heading}
-                variant='h4'
-                color='initial'>
-                {heading}
-              </Typography>
-              <Typography
-                component={motion.div}
-                variants={variantContent}
-                className={classes.content}
-                variant='h6'
-                color='initial'>
-                {content}
-              </Typography>
-            </motion.div>
-          );
-        })}
-      </motion.div>
-    </Grid>
+    <motion.div
+      className={classes.container}
+      variants={variantValues}
+      initial='hidden'
+      animate='visible'>
+      {values.map(({ heading, content }) => {
+        return (
+          <motion.div variants={variantContainer} className={classes.motion}>
+            <Typography
+              component={motion.div}
+              variants={variantHeading}
+              className={classes.heading}
+              variant='h4'
+              color='initial'>
+              {heading}
+            </Typography>
+            <Typography
+              component={motion.div}
+              variants={variantContent}
+              className={classes.content}
+              variant='h6'
+              color='initial'>
+              {content}
+            </Typography>
+          </motion.div>
+        );
+      })}
+    </motion.div>
   );
 };
 

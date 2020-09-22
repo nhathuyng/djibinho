@@ -13,4 +13,9 @@ export default makeStyles((theme) => ({
   content: {
     fontWeight: 300,
   },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
 }));
