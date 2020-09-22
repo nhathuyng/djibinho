@@ -10,6 +10,7 @@ export const variantValues = {
       type: 'spring',
       stiffness: 20,
       staggerChildren: 0.5,
+      // when: 'beforeChildren',
     },
   },
 };
@@ -30,4 +31,18 @@ export const variantContainer = {
 
 export const variantHeading = {};
 
-export const variantContent = {};
+export const variantContent = {
+  hidden: {
+    opacity: 0,
+    y: -10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 2,
+      type: 'tween',
+      duration: 2,
+    },
+  },
+};
