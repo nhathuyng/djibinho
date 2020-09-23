@@ -1,7 +1,8 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import useStyles from './styles';
 import { motion } from 'framer-motion';
+import useAnimInView from '../../../state/hooks/useAnimInView';
 import {
   variantContainer,
   variantHeading,
@@ -36,12 +37,14 @@ const values = [
 
 const ValuesContent: React.FC<ValuesContentProps> = ({}) => {
   const classes = useStyles();
+  const { animation, ref } = useAnimInView();
   return (
     <motion.div
+      ref={ref}
       className={classes.container}
       variants={variantValues}
       initial='hidden'
-      animate='visible'>
+      animate={animation}>
       {values.map(({ heading, content }) => {
         return (
           <motion.div variants={variantContainer} className={classes.motion}>

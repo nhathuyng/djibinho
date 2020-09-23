@@ -4,13 +4,19 @@ import useStyles from './styles';
 import Btn from '../../atoms/Btn/Btn';
 import { motion } from 'framer-motion';
 import { variantCamp, variantCampChild } from './variants';
+import useAnimInView from '../../../state/hooks/useAnimInView';
 
 interface SummerCampContentProps {}
 
 const SummerCampContent: React.FC<SummerCampContentProps> = ({}) => {
   const classes = useStyles();
+  const { animation, ref } = useAnimInView();
   return (
-    <motion.div variants={variantCamp} initial='hidden' animate='visible'>
+    <motion.div
+      ref={ref}
+      variants={variantCamp}
+      initial='hidden'
+      animate={animation}>
       <Grid
         alignItems='center'
         justify='center'
