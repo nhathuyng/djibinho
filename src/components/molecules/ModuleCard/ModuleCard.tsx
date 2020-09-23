@@ -28,7 +28,9 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ title, img, onClick }) => {
           onClick={onClick}
         />
         <CardContent className={classes.content}>
-          <Typography variant='h4'>{title}</Typography>
+          <Typography className={classes.typo} variant='h5'>
+            {title.toUpperCase()}
+          </Typography>
         </CardContent>
       </Card>
     </motion.div>

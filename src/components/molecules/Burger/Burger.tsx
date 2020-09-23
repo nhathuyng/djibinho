@@ -41,7 +41,7 @@ const Burger: React.FC<BurgerProps> = ({}) => {
         <motion.div variants={variantList} initial='hidden' animate='visible'>
           <List onClick={() => setOpen(false)} className={classes.list}>
             {links.map(({ name, link }, id) => (
-              <motion.div variants={variantChild}>
+              <motion.div key={id} variants={variantChild}>
                 <ListItem className={classes.item} button key={link}>
                   <Typography variant='h5'>
                     <ListItemText disableTypography primary={name} />

@@ -1,23 +1,53 @@
-import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
+import {} from '@material-ui/core';
 import useStyles from './styles';
-import ModuleCard from '../../molecules/ModuleCard/ModuleCard';
+import ModuleCards from '../../molecules/ModuleCards/ModuleCards';
+import ModulesDialog from '../ModulesDialog/ModulesDialog';
+interface ArticleCardsProps {}
+
+const articles = [
+  {
+    title: 'game intelligence',
+    img: require('../../../media/images/camp.jpg'),
+  },
+  {
+    title: 'motivation',
+    img: require('../../../media/images/camp.jpg'),
+  },
+  {
+    title: 'how we work',
+    img: require('../../../media/images/camp.jpg'),
+  },
+];
 
 interface ArticleCardsProps {}
 
 const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <Grid item>
-      <Typography variant='h3' color='initial'>
-        VIDEOS
-      </Typography>
-      <ModuleCard
-        onClick={() => console.log('clicky')}
-        title='soccer'
-        img={require('../../../media/images/camp.jpg')}
+    <React.Fragment>
+      <ModuleCards
+        heading='knowledge modules'
+        data={articles}
+        onClick={handleClickOpen}
       />
-    </Grid>
+      <ModulesDialog
+        title='modules'
+        handleClickOpen={handleClickOpen}
+        handleClose={handleClose}
+        open={open}
+      />
+    </React.Fragment>
   );
 };
 

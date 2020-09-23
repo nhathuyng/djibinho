@@ -11,7 +11,7 @@ const Modules: React.FC<ModulesProps> = ({}) => {
   return (
     <div className={classes.root}>
       <Container className={classes.container} maxWidth='lg'>
-        <Grid direction='column-reverse' container>
+        <Grid direction='column' container>
           <VideoCards />
           <ArticleCards />
         </Grid>

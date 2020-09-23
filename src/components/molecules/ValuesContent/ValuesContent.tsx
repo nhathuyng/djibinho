@@ -45,9 +45,12 @@ const ValuesContent: React.FC<ValuesContentProps> = ({}) => {
       variants={variantValues}
       initial='hidden'
       animate={animation}>
-      {values.map(({ heading, content }) => {
+      {values.map(({ heading, content }, id) => {
         return (
-          <motion.div variants={variantContainer} className={classes.motion}>
+          <motion.div
+            key={id}
+            variants={variantContainer}
+            className={classes.motion}>
             <Typography
               component={motion.div}
               variants={variantHeading}

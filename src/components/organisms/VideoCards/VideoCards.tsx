@@ -1,17 +1,35 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import {} from '@material-ui/core';
 import useStyles from './styles';
+import ModuleCards from '../../molecules/ModuleCards/ModuleCards';
+
+interface VideoCardsProps {}
+
+const videos = [
+  {
+    title: 'technique',
+    img: require('../../../media/images/camp.jpg'),
+  },
+  {
+    title: 'passing',
+    img: require('../../../media/images/camp.jpg'),
+  },
+  {
+    title: 'shooting',
+    img: require('../../../media/images/camp.jpg'),
+  },
+];
 
 interface VideoCardsProps {}
 
 const VideoCards: React.FC<VideoCardsProps> = ({}) => {
   const classes = useStyles();
   return (
-    <Grid item>
-      <Typography variant='h3' color='initial'>
-        KNOWLEDGE MODULES
-      </Typography>
-    </Grid>
+    <ModuleCards
+      heading='videos'
+      data={videos}
+      onClick={() => console.log('f')}
+    />
   );
 };
 

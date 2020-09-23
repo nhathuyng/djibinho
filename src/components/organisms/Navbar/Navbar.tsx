@@ -1,11 +1,16 @@
 import React from 'react';
-import { AppBar, Toolbar, Box, Typography } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Typography,
+  useMediaQuery,
+} from '@material-ui/core';
 import useStyles from './styles';
 import NavLinks from '../../molecules/NavLinks/NavLinks';
 import Logo from '../../atoms/Logo/Logo';
 import Title from '../../atoms/Title/Title';
 import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Burger from '../../molecules/Burger/Burger';
 
 interface NavbarProps {}
