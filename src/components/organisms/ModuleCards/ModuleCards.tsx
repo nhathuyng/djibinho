@@ -70,7 +70,7 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
               <AppBar className={classes.appBar}>
                 <Toolbar>
                   <Typography variant='h6' className={classes.title}>
-                    {title}
+                    {title.toUpperCase()}
                   </Typography>
                   <Button
                     autoFocus
