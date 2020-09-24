@@ -46,18 +46,16 @@ const dataState = createSlice({
   name: 'dataState',
   initialState: initialData,
   reducers: {
-    setDialog: (
-      state,
-      action: PayloadAction<{ id: string; open: boolean }>
-    ) => {
+    setDialog: (state, action: PayloadAction<string>) => {
       state.map((data) => {
-        if (data.id === action.payload.id) {
-          data.open = action.payload.open;
+        if (data.id === action.payload) {
+          data.open = !data.open;
         }
-        return data;
       });
     },
-    closeDialog: (state) => {},
+    closeDialog: (state) => {
+      state.map((data) => (data.open = !data.open));
+    },
   },
 });
 

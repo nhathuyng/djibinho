@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Divider, Typography } from '@material-ui/core';
 import useStyles from './styles';
 import { motion } from 'framer-motion';
 import useAnimInView from '../../../state/hooks/useAnimInView';
@@ -67,6 +67,7 @@ const ValuesContent: React.FC<ValuesContentProps> = ({}) => {
               color='initial'>
               {content}
             </Typography>
+            <Divider />
           </motion.div>
         );
       })}

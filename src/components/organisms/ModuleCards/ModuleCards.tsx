@@ -57,7 +57,7 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
           <React.Fragment key={id}>
             <ModuleCard
               onClick={() => {
-                dispatch(setDialog({ id, open: !open }));
+                dispatch(setDialog(id));
               }}
               title={title}
               img={img}
@@ -65,7 +65,7 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
             <Dialog
               fullScreen
               open={open}
-              onClose={() => dispatch(setDialog({ id, open }))}
+              onClose={() => dispatch(closeDialog())}
               TransitionComponent={Transition}>
               <AppBar className={classes.appBar}>
                 <Toolbar>
@@ -75,7 +75,7 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
                   <Button
                     autoFocus
                     color='inherit'
-                    onClick={() => dispatch(setDialog({ id, open: !open }))}>
+                    onClick={() => dispatch(closeDialog())}>
                     close
                   </Button>
                 </Toolbar>
