@@ -1,1 +1,6 @@
-export default interface ITest {}
+export interface IData {
+  title: string;
+  img: string;
+  id: string;
+  open: boolean;
+}

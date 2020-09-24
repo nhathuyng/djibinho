@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 interface ModuleCardProps {
   title: string;
   img: string;
-  onClick: () => void;
+  onClick: any;
 }
 
 const ModuleCard: React.FC<ModuleCardProps> = ({ title, img, onClick }) => {
