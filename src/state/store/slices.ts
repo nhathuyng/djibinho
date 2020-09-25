@@ -1,61 +1,26 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IData } from '../../other/interfaces';
-import { v4 as uuidv4 } from 'uuid';
+import { IReducer } from '../../other/interfaces';
+import { initialData } from './state';
 
-export const initialData: IData[] = [
-  {
-    title: 'game intelligence',
-    img: require('../../media/images/camp.jpg'),
-    id: uuidv4(),
+const initialReducer: IReducer = {
+  img: initialData,
+  dialog: {
+    currentId: null,
     open: false,
   },
-  {
-    title: 'motivation',
-    img: require('../../media/images/camp.jpg'),
-    id: uuidv4(),
-    open: false,
-  },
-  {
-    title: 'how we work',
-    img: require('../../media/images/camp.jpg'),
-    id: uuidv4(),
-    open: false,
-  },
-
-  {
-    title: 'technique',
-    img: require('../../media/images/camp.jpg'),
-    id: uuidv4(),
-    open: false,
-  },
-  {
-    title: 'passing',
-    img: require('../../media/images/camp.jpg'),
-    id: uuidv4(),
-    open: false,
-  },
-  {
-    title: 'shooting',
-    img: require('../../media/images/camp.jpg'),
-    id: uuidv4(),
-    open: false,
-  },
-];
+};
 
 const dataState = createSlice({
   name: 'dataState',
-  initialState: initialData,
+  initialState: initialReducer,
   reducers: {
-    setDialog: (state, action: PayloadAction<string>) => {
-      state.map((data) => {
-        if (data.id === action.payload) {
-          data.open = !data.open;
-        }
-      });
+    setDialog: (
+      state,
+      action: PayloadAction<{ currentId: string; open: boolean }>
+    ) => {
+      state.dialog = action.payload;
     },
-    closeDialog: (state) => {
-      state.map((data) => (data.open = !data.open));
-    },
+    closeDialog: (state) => {},
   },
 });
 
