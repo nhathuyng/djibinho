@@ -49,8 +49,8 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
     if (state.dataState.dialog.open) {
       const currentImg = state.dataState.img.find(
         (img: IData) => img.id === state.dataState.dialog.currentId
-      );
-      setData(currentImg);
+      )!;
+      setData(currentImg!);
     }
   }, [state.dataState.dialog.open]);
 
