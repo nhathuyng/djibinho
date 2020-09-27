@@ -4,7 +4,6 @@ export default makeStyles((theme) => ({
   card: {
     backgroundColor: theme.palette.primary.main,
     minWidth: '290px',
-    margin: '2rem 0',
   },
   media: {
     height: '220px',
