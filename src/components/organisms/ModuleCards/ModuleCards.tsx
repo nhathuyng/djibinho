@@ -55,6 +55,7 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
 
   return (
     <Grid
+      className={classes.root}
       component={motion.div}
       ref={ref}
       variants={variantModules}
@@ -63,7 +64,7 @@ const ModuleCards: React.FC<ModuleCardsProps> = ({}) => {
       container
       spacing={6}>
       {state.dataState.img.map(({ title, img, id }) => (
-        <Grid key={id} item sm={12} md={6}>
+        <Grid key={id} item xs={12} md={6}>
           <motion.div variants={variantChild}>
             <ModuleCard
               onClick={() => {

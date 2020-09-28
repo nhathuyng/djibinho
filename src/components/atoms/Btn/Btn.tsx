@@ -5,12 +5,14 @@ import useStyles from './styles';
 interface BtnProps {
   onClick?: () => void;
   children: string;
+  type: 'button' | 'reset' | 'submit' | undefined;
 }
 
-const Btn: React.FC<BtnProps> = ({ onClick, children }) => {
+const Btn: React.FC<BtnProps> = ({ onClick, children, type }) => {
   const classes = useStyles();
   return (
     <Button
+      type={type}
       className={classes.button}
       onClick={onClick}
       variant='contained'

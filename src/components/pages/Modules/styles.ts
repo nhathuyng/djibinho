@@ -7,6 +7,14 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
   },
-  typo: { margin: '2rem 0' },
-  container: {},
+  typo: {
+    margin: '2rem 0',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '8rem',
+    },
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
 }));

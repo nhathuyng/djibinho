@@ -47,7 +47,7 @@ const SummerCampContent: React.FC<SummerCampContentProps> = ({}) => {
           In the Summer Camp of 2020, the kids learned bliblablbviad
         </Typography>
         <motion.div variants={variantCampChild}>
-          <Btn>work with us</Btn>
+          <Btn type='button'>work with us</Btn>
         </motion.div>
       </Grid>
     </motion.div>

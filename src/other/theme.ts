@@ -50,4 +50,11 @@ export const theme = createMuiTheme({
       },
     },
   },
+  props: {
+    MuiTextField: {
+      InputLabelProps: {
+        classes: {},
+      },
+    },
+  },
 });

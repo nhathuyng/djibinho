@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   card: {
     backgroundColor: theme.palette.primary.main,
-    minWidth: '290px',
   },
   media: {
     height: '220px',

@@ -49,7 +49,9 @@ const HeroContent: React.FC<HeroContentProps> = ({}) => {
           Focusing especially on footwork and right coordination.
         </Typography>
         <motion.div className={classes.btnDiv} variants={variantChildren}>
-          <Btn onClick={handleOpen}>learn more</Btn>
+          <Btn type='button' onClick={handleOpen}>
+            learn more
+          </Btn>
         </motion.div>
       </motion.div>
       <VideoModal open={open} handleClose={handleClose} />
